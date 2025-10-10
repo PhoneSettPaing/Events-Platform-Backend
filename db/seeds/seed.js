@@ -105,43 +105,46 @@ const seed = ({
       return db.query(insertCategoriesQuery);
     })
     .then(() => {
-        ///here problem no category name
+      ///here problem no category name
       const formattedEvents = eventsData.map(
         ({
+          image_url,
           title,
           description,
-          category_name,
-          city,
+          category_id,
+          capacity,
           price,
-          location,
           date,
           from_time,
           to_time,
-          image_url,
+          location,
+          city,
         }) => [
+          image_url,
           title,
           description,
-          category_name,
-          city,
+          category_id,
+          capacity,
           price,
-          location,
           date,
           from_time,
           to_time,
-          image_url,
+          location,
+          city,
         ]
       );
       const insertEventsQuery = format(
-        `INSERT INTO events(title,
+        `INSERT INTO events(image_url,
+          title,
           description,
-          category_name,
-          city,
+          category_id,
+          capacity,
           price,
-          location,
           date,
           from_time,
           to_time,
-          image_url) VALUES %L`,
+          location,
+          city) VALUES %L`,
         formattedEvents
       );
       return db.query(insertEventsQuery);
