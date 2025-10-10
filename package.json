@@ -1,0 +1,33 @@
+{
+  "name": "events-platform-backend",
+  "version": "1.0.0",
+  "description": "events-platform-backend",
+  "main": "listen.js",
+  "scripts": {
+    "setup-dbs": "psql -f ./db/setup-dbs.sql",
+    "seed-dev": "node ./db/seeds/run-seed.js",
+    "test": "jest --runInBand",
+    "test-seed": "jest seed.test.js",
+    "start": "node listen.js",
+    "seed-prod": "NODE_ENV=production npm run seed-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhoneSettPaing/Events-Platform-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhoneSettPaing/Events-Platform-Backend/issues"
+  },
+  "homepage": "https://github.com/PhoneSettPaing/Events-Platform-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jest": "^30.2.0",
+    "pg": "^8.16.3",
+    "pg-format": "^1.0.4",
+    "supertest": "^7.1.4"
+  }
+}
