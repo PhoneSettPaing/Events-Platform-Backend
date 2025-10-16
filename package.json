@@ -9,7 +9,7 @@
     "test": "jest --runInBand",
     "test-seed": "jest seed.test.js",
     "start": "node listen.js",
-    "seed-prod": "NODE_ENV=production npm run seed-dev"
+    "seed-prod": "cross-env NODE_ENV=production npm run seed-dev"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
     "pg": "^8.16.3",
     "pg-format": "^1.0.4",
     "supertest": "^7.1.4"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
