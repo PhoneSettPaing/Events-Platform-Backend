@@ -8,7 +8,7 @@ const runSeed = (categoriesData, eventsData) => {
   return db
     .query(
       `CREATE TABLE IF NOT EXISTS users (
-    user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE,
     avatar_url TEXT,
     full_name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
