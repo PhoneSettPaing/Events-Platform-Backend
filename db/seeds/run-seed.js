@@ -10,9 +10,8 @@ const runSeed = (categoriesData, eventsData) => {
       `CREATE TABLE IF NOT EXISTS users (
     user_id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE,
     avatar_url TEXT,
-    full_name TEXT NOT NULL,
+    full_name TEXT,
     email TEXT UNIQUE NOT NULL,
-    password TEXT,
     role TEXT CHECK (role IN ('admin', 'staff', 'user')) DEFAULT 'user',
     created_at TIMESTAMP DEFAULT NOW());`
     )
