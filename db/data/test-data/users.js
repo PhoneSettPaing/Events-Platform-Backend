@@ -4,7 +4,6 @@ module.exports = [
     full_name: "Alice Thompson",
     email: "alice.thompson@eventhub.co.uk",
     role: "admin",
-    phone: "+44 7700 900001",
     created_at: "2025-10-09T10:00:00Z",
   },
   {
@@ -12,7 +11,6 @@ module.exports = [
     full_name: "Mark Robinson",
     email: "mark.robinson@eventhub.co.uk",
     role: "staff",
-    phone: "+44 7700 900002",
     created_at: "2025-10-09T10:05:00Z",
   },
   {
@@ -20,7 +18,6 @@ module.exports = [
     full_name: "Sophie Patel",
     email: "sophie.patel@eventhub.co.uk",
     role: "staff",
-    phone: "+44 7700 900003",
     created_at: "2025-10-09T10:10:00Z",
   },
   {
@@ -28,7 +25,6 @@ module.exports = [
     full_name: "Ben Harris",
     email: "ben.harris@example.com",
     role: "user",
-    phone: "+44 7700 900004",
     created_at: "2025-10-09T10:15:00Z",
   },
   {
@@ -36,7 +32,6 @@ module.exports = [
     full_name: "Ella Nguyen",
     email: "ella.nguyen@example.com",
     role: "user",
-    phone: "+44 7700 900005",
     created_at: "2025-10-09T10:20:00Z",
   },
   {
@@ -44,7 +39,6 @@ module.exports = [
     full_name: "James O’Connor",
     email: "james.oconnor@example.com",
     role: "user",
-    phone: "+44 7700 900006",
     created_at: "2025-10-09T10:25:00Z",
   },
 ];

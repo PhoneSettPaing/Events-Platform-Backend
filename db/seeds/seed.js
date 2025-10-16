@@ -25,11 +25,11 @@ const seed = ({
     .then(() => {
       return db.query(`CREATE TABLE users (
     user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    avatar_url TEXT,
     full_name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
     password TEXT,
     role TEXT CHECK (role IN ('admin', 'staff', 'user')) DEFAULT 'user',
-    phone TEXT,
     created_at TIMESTAMP DEFAULT NOW());`);
     })
     .then(() => {
@@ -46,7 +46,6 @@ const seed = ({
     description TEXT,
     category_id INT REFERENCES categories(category_id) ON DELETE SET NULL,
     capacity INT DEFAULT 100,
-    attendees INT DEFAULT 0,
     price NUMERIC(10,2) DEFAULT 0.00,
     date DATE,
     from_time TIME,
@@ -75,37 +74,32 @@ const seed = ({
     })
     .then(() => {
       const formattedUsers = usersData.map(
-        ({ user_id, full_name, email, role, phone, created_at }) => [
+        ({ user_id, avatar_url, full_name, email, role, created_at }) => [
           user_id,
+          avatar_url,
           full_name,
           email,
           role,
-          phone,
           created_at,
         ]
       );
       const insertUsersQuery = format(
-        `INSERT INTO users(user_id, full_name, email, role, phone, created_at) VALUES %L`,
+        `INSERT INTO users(user_id, avatar_url, full_name, email, role, created_at) VALUES %L`,
         formattedUsers
       );
       return db.query(insertUsersQuery);
     })
     .then(() => {
       const formattedCategories = categoriesData.map(
-        ({ category_id, category_name, description }) => [
-          category_id,
-          category_name,
-          description,
-        ]
+        ({ category_name, description }) => [category_name, description]
       );
       const insertCategoriesQuery = format(
-        `INSERT INTO categories(category_id, category_name, description) VALUES %L`,
+        `INSERT INTO categories(category_name, description) VALUES %L`,
         formattedCategories
       );
       return db.query(insertCategoriesQuery);
     })
     .then(() => {
-      ///here problem no category name
       const formattedEvents = eventsData.map(
         ({
           image_url,
@@ -162,7 +156,6 @@ const seed = ({
     .then(() => {
       const formattedBookedEvents = bookedEventsData.map(
         ({
-          booked_id,
           event_id,
           user_id,
           full_name,
@@ -170,19 +163,10 @@ const seed = ({
           phone,
           tickets,
           booked_at,
-        }) => [
-          booked_id,
-          event_id,
-          user_id,
-          full_name,
-          email,
-          phone,
-          tickets,
-          booked_at,
-        ]
+        }) => [event_id, user_id, full_name, email, phone, tickets, booked_at]
       );
       const insertBookedEventsQuery = format(
-        `INSERT INTO booked_events(booked_id,
+        `INSERT INTO booked_events(
           event_id,
           user_id,
           full_name,
@@ -200,69 +184,3 @@ const seed = ({
 };
 
 module.exports = seed;
-
-// -- ==============================
-// -- USERS TABLE
-// -- ==============================
-// CREATE TABLE users (
-//     user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-//     full_name TEXT NOT NULL,
-//     email TEXT UNIQUE NOT NULL,
-//     password TEXT,
-//     role TEXT CHECK (role IN ('admin', 'staff', 'user')) DEFAULT 'user',
-//     phone TEXT,
-//     created_at TIMESTAMP DEFAULT NOW()
-// );
-
-// -- ==============================
-// -- CATEGORIES TABLE
-// -- ==============================
-// CREATE TABLE categories (
-//     category_id SERIAL PRIMARY KEY,
-//     category_name TEXT UNIQUE NOT NULL,
-//     description TEXT
-// );
-
-// -- ==============================
-// -- EVENTS TABLE
-// -- ==============================
-// CREATE TABLE events (
-//     event_id SERIAL PRIMARY KEY,
-//     image_url TEXT,
-//     title TEXT NOT NULL,
-//     description TEXT,
-//     category_id INT REFERENCES categories(category_id) ON DELETE SET NULL,
-//     capacity INT DEFAULT 100,
-//     attendees INT DEFAULT 0,
-//     price NUMERIC(10,2) DEFAULT 0.00,
-//     date DATE,
-//     from_time TIME,
-//     to_time TIME,
-//     location TEXT,
-//     city TEXT,
-//     created_at TIMESTAMP DEFAULT NOW()
-// );
-
-// -- ==============================
-// -- SAVED EVENTS TABLE
-// -- ==============================
-// CREATE TABLE saved_events (
-//     user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
-//     event_id INT REFERENCES events(event_id) ON DELETE CASCADE,
-//     saved_at TIMESTAMP DEFAULT NOW(),
-//     PRIMARY KEY (user_id, event_id)
-// );
-
-// -- ==============================
-// -- BOOKED EVENTS TABLE
-// -- ==============================
-// CREATE TABLE booked_events (
-//     booked_id SERIAL PRIMARY KEY,
-//     event_id INT REFERENCES events(event_id) ON DELETE CASCADE,
-//     user_id UUID REFERENCES users(user_id) ON DELETE SET NULL,
-//     full_name TEXT NOT NULL,
-//     email TEXT NOT NULL,
-//     phone TEXT,
-//     tickets INT DEFAULT 1,
-//     booked_at TIMESTAMP DEFAULT NOW()
-// );

@@ -1,4 +1,9 @@
-const { Pool } = require("pg");
+const pg = require("pg");
+const { Pool } = pg;
+// Prevent DATE (OID 1082) from being converted to JS Date objects
+// Returns date and time fields as plain strings exactly as stored in Postgres.
+pg.types.setTypeParser(1082, (str) => str); // DATE
+pg.types.setTypeParser(1083, (str) => str); // TIME
 
 const ENV = process.env.NODE_ENV || "development";
 
