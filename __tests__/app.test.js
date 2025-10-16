@@ -52,6 +52,43 @@ describe("GET /api/users", () => {
   });
 });
 
+describe("GET /api/users/:user_id", () => {
+  test("200: Responds with a user object for given user_id", () => {
+    return request(app)
+      .get("/api/users/f4b3cbd0-0a12-4e2b-9d10-9e2a3e45a111")
+      .expect(200)
+      .then(({ body: { user } }) => {
+        expect(user).toMatchObject({
+          user_id: "f4b3cbd0-0a12-4e2b-9d10-9e2a3e45a111",
+          avatar_url: null,
+          full_name: "Alice Thompson",
+          email: "alice.thompson@eventhub.co.uk",
+          password: null,
+          role: "admin",
+          created_at: expect.any(String),
+        });
+      });
+  });
+
+  test("400: Respond with Invalid user_id format! when user_id id invalid", () => {
+    return request(app)
+      .get("/api/users/NotVaildUserId")
+      .expect(400)
+      .then(({ body: { msg } }) => {
+        expect(msg).toBe("Invalid user_id format!");
+      });
+  });
+
+  test("404: Respond with user_id Not Found! when user_id not in database", () => {
+    return request(app)
+      .get("/api/users/123e4567-e89b-12d3-a456-426614174000")
+      .expect(404)
+      .then(({ body: { msg } }) => {
+        expect(msg).toBe("user_id Not Found!");
+      });
+  });
+});
+
 describe("PATCH /api/users/:user_id", () => {
   test("200: Respond with an updated user object with updated full_name and avatar_url for given user_id", () => {
     const patchObj = {

@@ -11,6 +11,16 @@ exports.getUsers = (req, res) => {
   });
 };
 
+exports.getUserById = (req, res, next) => {
+  const { user_id } = req.params;
+
+  return selectUserById(user_id)
+    .then((user) => {
+      res.status(200).send({ user });
+    })
+    .catch(next);
+};
+
 exports.patchUserById = (req, res, next) => {
   const { user_id } = req.params;
   const { full_name, avatar_url } = req.body;
