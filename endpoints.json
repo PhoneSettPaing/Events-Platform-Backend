@@ -44,7 +44,7 @@
       }
     }
   },
-  "PATCH /api/user/:user_id": {
+  "PATCH /api/users/:user_id": {
     "description": "update a user with provided user_id's full_name or avatar_url",
     "exampleResponse": {
       "user": {
@@ -58,7 +58,7 @@
       }
     }
   },
-  "PATCH /api/user/:user_id/role": {
+  "PATCH /api/users/:user_id/role": {
     "description": "update a user with provided user_id's role",
     "exampleResponse": {
       "user": {
@@ -213,7 +213,7 @@
   "GET /api/saved_events/:user_id": {
     "description": "serves an array of saved events objects for given user_id",
     "exampleResponse": {
-      "booked_events": [
+      "saved_events": [
         {
           "event_id": 48,
           "image_url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
