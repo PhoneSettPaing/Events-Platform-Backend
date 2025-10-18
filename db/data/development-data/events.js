@@ -39,7 +39,8 @@ module.exports = [
     city: "Leeds",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1504203700686-0b3b826bca47",
+    image_url:
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1200&q=80",
     title: "Photography Masterclass",
     description: "Learn street and portrait photography with experts.",
     category_id: 1,
@@ -78,7 +79,8 @@ module.exports = [
     city: "London",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
+    image_url:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     title: "Cybersecurity Essentials",
     description: "Learn the basics of protecting your data online.",
     category_id: 2,
@@ -104,7 +106,8 @@ module.exports = [
     city: "Manchester",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1531497865144-0464ef8fb9a5",
+    image_url:
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
     title: "Women in Tech",
     description: "Inspiring talks from women leading the tech industry.",
     category_id: 2,
@@ -182,7 +185,8 @@ module.exports = [
     city: "Liverpool",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1531497865144-0464ef8fb9a5",
+    image_url:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
     title: "Tech Professionals Meetup",
     description: "Build connections with fellow developers and IT experts.",
     category_id: 3,
@@ -221,7 +225,8 @@ module.exports = [
     city: "Leeds",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1594737625785-cbdb0d0e91f3",
+    image_url:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80",
     title: "HIIT Bootcamp",
     description: "High-intensity workout session with experienced trainers.",
     category_id: 4,
@@ -234,7 +239,8 @@ module.exports = [
     city: "London",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1526403226-1d1d42b29b5e",
+    image_url:
+      "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2444",
     title: "Indoor Climbing Session",
     description: "Beginner-friendly indoor climbing adventure.",
     category_id: 4,
@@ -247,7 +253,8 @@ module.exports = [
     city: "Bristol",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1599058917212-d750089bc07a",
+    image_url:
+      "https://images.unsplash.com/photo-1697468502173-606f075e3cac?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2532",
     title: "Zumba Dance Party",
     description: "Fun and energetic Zumba dance workout.",
     category_id: 4,
@@ -338,7 +345,8 @@ module.exports = [
     city: "Manchester",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1496317556649-f930d733eea0",
+    image_url:
+      "https://images.unsplash.com/photo-1693135965329-af7c6634fe1d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
     title: "Sculpture Showcase",
     description: "Explore modern and abstract sculptures.",
     category_id: 6,
@@ -377,7 +385,8 @@ module.exports = [
     city: "Bristol",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1617038260897-2f1e1c95df75",
+    image_url:
+      "https://images.unsplash.com/photo-1612058060757-aa8f7f66e687?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
     title: "Pottery Class",
     description: "Create your own pottery and learn new skills.",
     category_id: 6,
@@ -429,7 +438,8 @@ module.exports = [
     city: "Birmingham",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1532634896-26909d0d4b42",
+    image_url:
+      "https://images.unsplash.com/photo-1643821767977-942970645597?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2069",
     title: "Wine Tasting Evening",
     description: "Sample a curated selection of wines with experts.",
     category_id: 7,
@@ -442,7 +452,8 @@ module.exports = [
     city: "London",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1555992336-03a23c9d94b4",
+    image_url:
+      "https://images.unsplash.com/photo-1614119068601-483274e9dcb7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1006",
     title: "BBQ Masterclass",
     description: "Learn outdoor grilling techniques and recipes.",
     category_id: 7,
@@ -468,7 +479,8 @@ module.exports = [
     city: "Manchester",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1506595671343-825fd1d6d7b8",
+    image_url:
+      "https://images.unsplash.com/photo-1736240844268-622147e570d4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2069",
     title: "Soup Kitchen Volunteering",
     description: "Help serve hot meals to those in need.",
     category_id: 8,
@@ -481,7 +493,8 @@ module.exports = [
     city: "Birmingham",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1598133894008-1e3879df8efc",
+    image_url:
+      "https://images.unsplash.com/photo-1700665537650-1bf37979aae0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2072",
     title: "Animal Shelter Helpers",
     description: "Assist at the local animal rescue shelter.",
     category_id: 8,
@@ -507,7 +520,8 @@ module.exports = [
     city: "Liverpool",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1532634896-26909d0d4b42",
+    image_url:
+      "https://images.unsplash.com/photo-1610093703375-6d8fd641294b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
     title: "Beach Cleanup",
     description: "Help clean up the local seaside and raise awareness.",
     category_id: 8,
@@ -585,7 +599,8 @@ module.exports = [
     city: "Bristol",
   },
   {
-    image_url: "https://images.unsplash.com/photo-1581092588429-1e7b1a85c9b7",
+    image_url:
+      "https://images.unsplash.com/photo-1675008935130-f67dbfcf05d5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
     title: "Remote Work Tips",
     description: "Learn how to stay productive while working remotely.",
     category_id: 10,
