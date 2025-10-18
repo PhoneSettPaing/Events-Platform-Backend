@@ -1,5 +1,4 @@
-import nodemailer from "nodemailer";
-
+const nodemailer = require("nodemailer");
 const emailRouter = require("express").Router();
 
 emailRouter.post("/send-confirmation", async (req, res) => {
