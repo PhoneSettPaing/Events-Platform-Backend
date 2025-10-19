@@ -60,7 +60,7 @@ emailRouter.post("/send-confirmation", async (req, res) => {
                     </tr>
                   </table>
 
-                  <a href="http://localhost:5173/booked-events" style="display:inline-block; margin-top:28px; padding:14px 28px; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; border-radius:8px; text-decoration:none; font-weight:600;">View My Booking</a>
+                  <a href="https://eventhub-events.netlify.app/booked-events" style="display:inline-block; margin-top:28px; padding:14px 28px; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; border-radius:8px; text-decoration:none; font-weight:600;">View My Booking</a>
 
                   <p style="font-size: 14px; color: #6b7280; margin-top:32px;">
                     Need help? Contact us at <a href="mailto:support@eventhub.co.uk" style="color:#4f46e5; text-decoration:none;">support@eventhub.co.uk</a>.
@@ -70,7 +70,7 @@ emailRouter.post("/send-confirmation", async (req, res) => {
 
                   <p style="font-size:12px; color:#9ca3af;">
                     &copy; ${new Date().getFullYear()} EventHub. All rights reserved.<br />
-                    <a href="http://localhost:5173/" style="color:#6366f1; text-decoration:none;">Visit our site</a>
+                    <a href="https://eventhub-events.netlify.app/" style="color:#6366f1; text-decoration:none;">Visit our site</a>
                   </p>
                 </td>
               </tr>
