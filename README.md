@@ -22,6 +22,7 @@ This repo is the EventHub backend API — a RESTful service that powers the Even
   - [🧪 Running Tests](#-running-tests)
   - [📖 API Documentation](#-api-documentation)
     - [🔑 Core API Endpoints](#-core-api-endpoints)
+  - [🔮 Future work](#-future-work)
   - [👤 Credits](#-credits)
 
 <br/>
@@ -198,7 +199,14 @@ Alternatively, refer to the included [`endpoints.json`](./endpoints.json) file.
 | **POST**   | `/api/saved_events/:user_id`  | Save an event for later                               |
 | **DELETE** | `/api/saved_events/:user_id`  | Remove a saved event for a user                       |
 
+## 🔮 Future work
+
+- Create endpoint for Admin dashboard (getting all bookings for overview)
+- Create endponts for Event & category deletion
+- Add filtering by category names, price, city and pagination
+
 ## 👤 Credits
 
 Developed and maintained by [**Phone Sett Paing**](https://github.com/PhoneSettPaing)
+
 
