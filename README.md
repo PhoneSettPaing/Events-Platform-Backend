@@ -4,6 +4,7 @@
 
 This repo is the EventHub backend API — a RESTful service that powers the EventHub frontend. It provides endpoints for browsing events, creating events (admin/staff), booking events, saving events, user admin (roles), and sending confirmation emails.
 
+💻 Frontend Repository: [View Frontend Repo](https://github.com/PhoneSettPaing/Events-Platform-Frontend)
 <br/>
 
 ## 📖 Table of Contents
@@ -63,7 +64,7 @@ This repo is the EventHub backend API — a RESTful service that powers the Even
 
 ## 🗄️ Database Schema
 
-![EventHub-Schena](./eventhub-schema.png)
+![EventHub-Schena](./eventhub-schema.PNG)
 
 <br />
 
@@ -200,3 +201,4 @@ Alternatively, refer to the included [`endpoints.json`](./endpoints.json) file.
 ## 👤 Credits
 
 Developed and maintained by [**Phone Sett Paing**](https://github.com/PhoneSettPaing)
+
