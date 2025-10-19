@@ -17,7 +17,7 @@ emailRouter.post("/send-confirmation", async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: "EventHub <no-reply@eventhub.co.uk>",
+      from: "EventHub <onboarding@resend.dev>",
       to: email,
       subject: `Booking Confirmation: ${title}`,
       html: `
