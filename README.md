@@ -8,14 +8,14 @@ This repo is the EventHub backend API — a RESTful service that powers the Even
 
 ## 📖 Table of Contents
 
-- [🗂️ EventHub Backend API](#-eventhub-backend-api)
+- [🗂️ EventHub Backend API](#️-eventhub-backend-api)
   - [📖 Table of Contents](#-table-of-contents)
   - [🚀 Live Demo](#-live-demo)
   - [✨ Features](#-features)
-  - [🛠️ Tech Stack](#-tech-stack)
+  - [🛠️ Tech Stack](#️-tech-stack)
   - [📦 Architecture](#-architecture)
-  - [🗄️ Database Schema](#-database-schema)
-  - [✅ Getting Started](#-getting-started)
+  - [🗄️ Database Schema](#️-database-schema)
+  - [✅ Getting started](#-getting-started)
     - [🔧 Prerequisites](#-prerequisites)
     - [🛠 Installation \& Setup](#-installation--setup)
   - [🧪 Running Tests](#-running-tests)
@@ -72,12 +72,12 @@ This repo is the EventHub backend API — a RESTful service that powers the Even
 ### 🔧 Prerequisites
 
 Before running this project locally, make sure you have:
+
 - **Node.js**: `v22.17.0` or higher  
   _Check your version with:_
   ```bash
   node --version
   ```
-  
 - **PostgreSQL**: v17.5 or higher  
   _Check your version with:_
   ```bash
@@ -88,9 +88,9 @@ Before running this project locally, make sure you have:
 
 **1. Clone this repository**
 
-   ```bash
-   git clone https://github.com/PhoneSettPaing/Events-Platform-Backend.git
-   ```
+```bash
+git clone https://github.com/PhoneSettPaing/Events-Platform-Backend.git
+```
 
 **2. Navigate into the project directory**
 
@@ -100,51 +100,53 @@ cd Events-Platform-Backend
 
 **3. Install dependencies**
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 **4. Set up environment variables**
 
-   Create four `.env` files in the root directory:
+Create four `.env` files in the root directory:
 
-   For development: **`.env.development`**
+For development: **`.env.development`**
 
-   ```
-   PGDATABASE=events_platform
-   ```
+```
+PGDATABASE=events_platform
+```
 
-   For testing: **`.env.test`**
+For testing: **`.env.test`**
 
-   ```
-   PGDATABASE=events_platform_test
-   ```
+```
+PGDATABASE=events_platform_test
+```
 
-   For resend: **`.env`**
+For resend: **`.env`**
 
-   ```
-   RESEND_API_KEY=your_resend_api_key
-   ```
+```
+RESEND_API_KEY=your_resend_api_key
+```
 
-   For production: **`.env.production`**
+For production: **`.env.production`**
 
-   ```
-   DATABASE_URL=your_supabase_database_url
-   ```
+```
+DATABASE_URL=your_supabase_database_url
+```
 
 **5. Create and seed your databases**
 
-   ```bash
-   npm run setup-dbs
-   ```
-   ```bash
-   npm run seed-dev
-   ```
+```bash
+npm run setup-dbs
+```
+
+```bash
+npm run seed-dev
+```
 
 **6. Start the server locally**
-   ```bash
-   npm start
-   ```
+
+```bash
+npm start
+```
 
 <br/>
 
@@ -177,23 +179,23 @@ Alternatively, refer to the included [`endpoints.json`](./endpoints.json) file.
 
 ### 🔑 Core API Endpoints
 
-| Method | Endpoint | Description |
-| ------ | -------- | ------------ |
-| **ALL** | `/*url` | Catch all invalid URLs and return 404 Not Found error |
-| **GET** | `/api` | Returns JSON of all available endpoints |
-| **GET** | `/api/users` | Get all users |
-| **GET** | `/api/users/:user_id` | Get a single user by user_id |
-| **PATCH** | `/api/users/:user_id` | Update user's full name or avatar |
-| **PATCH** | `/api/users/:user_id/role` | Update a user’s role (admin only) |
-| **GET** | `/api/categories` | Get all categories |
-| **GET** | `/api/events` | Get all events |
-| **GET** | `/api/events/:event_id` | Get a single event by event_id |
-| **POST** | `/api/events` | Add a new event (staff/admin only) |
-| **GET** | `/api/booked_events/:user_id` | Get all booked events for a specific user |
-| **POST** | `/api/booked_events/:user_id` | Book an event for a specific user |
-| **GET** | `/api/saved_events/:user_id` | Get all saved events for a specific user |
-| **POST** | `/api/saved_events/:user_id` | Save an event for later |
-| **DELETE** | `/api/saved_events/:user_id` | Remove a saved event for a user |
+| Method     | Endpoint                      | Description                                           |
+| ---------- | ----------------------------- | ----------------------------------------------------- |
+| **ALL**    | `/*url`                       | Catch all invalid URLs and return 404 Not Found error |
+| **GET**    | `/api`                        | Returns JSON of all available endpoints               |
+| **GET**    | `/api/users`                  | Get all users                                         |
+| **GET**    | `/api/users/:user_id`         | Get a single user by user_id                          |
+| **PATCH**  | `/api/users/:user_id`         | Update user's full name or avatar                     |
+| **PATCH**  | `/api/users/:user_id/role`    | Update a user’s role (admin only)                     |
+| **GET**    | `/api/categories`             | Get all categories                                    |
+| **GET**    | `/api/events`                 | Get all events                                        |
+| **GET**    | `/api/events/:event_id`       | Get a single event by event_id                        |
+| **POST**   | `/api/events`                 | Add a new event (staff/admin only)                    |
+| **GET**    | `/api/booked_events/:user_id` | Get all booked events for a specific user             |
+| **POST**   | `/api/booked_events/:user_id` | Book an event for a specific user                     |
+| **GET**    | `/api/saved_events/:user_id`  | Get all saved events for a specific user              |
+| **POST**   | `/api/saved_events/:user_id`  | Save an event for later                               |
+| **DELETE** | `/api/saved_events/:user_id`  | Remove a saved event for a user                       |
 
 ## 👤 Credits
 
